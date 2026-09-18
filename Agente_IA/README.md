@@ -2,8 +2,9 @@
 
 Prototipo del Entregable 1 descrito en el documento del proyecto. Incluye un agente
 conversacional con LangChain, memoria corta por sesion, una tool de compatibilidad y un
-microservicio FastAPI. Su finalidad es orientar al usuario para elegir perifericos de acuerdo con
-su categoria, presupuesto, uso, plataforma y preferencias.
+microservicio FastAPI con interfaz web. Su finalidad es orientar al usuario para elegir perifericos
+de acuerdo con su categoria, presupuesto, uso, plataforma y preferencias. La interfaz incluye un
+bot animado, indicador de respuesta y lectura por voz desde el navegador.
 
 El sistema no realiza compras, no procesa pagos y no consulta precios o existencias en tiempo
 real. Tampoco incluye RAG, base vectorial, Django ni arquitectura multiagente, porque corresponden
@@ -20,6 +21,11 @@ Sistema_ayuda_videojuego/
 |   |-- memory.py      # Memoria temporal por session_id
 |   |-- schemas.py     # Contratos de entrada y salida
 |   `-- tools.py       # Verificacion orientativa de compatibilidad
+|-- frontend/
+|   |-- index.html     # Interfaz del chat
+|   |-- styles.css     # Diseno responsive y animaciones
+|   |-- app.js         # Conexion con /chat y voz del bot
+|   `-- bot-compratech.png
 |-- tests/test_api.py
 |-- cli.py
 |-- requirements.txt
@@ -60,7 +66,8 @@ CompraTech: ...
 uvicorn app.main:app --reload
 ```
 
-Abre `http://127.0.0.1:8000/docs` o envia una solicitud desde otra terminal:
+Abre `http://127.0.0.1:8000` para usar el chat web. La documentacion interactiva de la API sigue
+disponible en `http://127.0.0.1:8000/docs`. Tambien puedes enviar una solicitud desde otra terminal:
 
 ```powershell
 Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8000/chat `

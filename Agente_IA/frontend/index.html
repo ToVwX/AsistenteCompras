@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>CompraTech | Asistente de periféricos</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="app-shell">
+    <aside class="bot-panel" aria-label="Asistente CompraTech">
+      <a class="brand" href="/" aria-label="Inicio de CompraTech">
+        <span class="brand-mark">C</span>
+        <span>Compra<span>Tech</span></span>
+      </a>
+
+      <div class="bot-copy">
+        <p class="eyebrow">ASESOR PERSONAL</p>
+        <h1>Tu próxima compra,<br><em>mejor pensada.</em></h1>
+        <p>Cuéntame qué periférico necesitas, cómo lo usarás y cuánto quieres gastar.</p>
+      </div>
+
+      <div class="bot-stage" id="botStage" data-state="idle" aria-live="polite">
+        <div class="voice-ring ring-one"></div>
+        <div class="voice-ring ring-two"></div>
+        <div class="bot-glow"></div>
+        <img src="/static/bot-compratech.png" alt="Robot asistente CompraTech" class="bot-image">
+        <div class="bot-shadow"></div>
+      </div>
+
+      <div class="bot-status">
+        <span class="status-dot"></span>
+        <span id="botStatus">Listo para ayudarte</span>
+      </div>
+
+      <div class="quick-prompts" aria-label="Preguntas sugeridas">
+        <button type="button" data-prompt="Busco audífonos inalámbricos cómodos para Xbox. Tengo 1500 pesos.">Audífonos para Xbox</button>
+        <button type="button" data-prompt="¿Qué debo buscar en un teclado mecánico silencioso para programar?">Teclado para programar</button>
+        <button type="button" data-prompt="Ayúdame a elegir un monitor para diseño y trabajo, presupuesto 6000 pesos.">Monitor para trabajar</button>
+      </div>
+    </aside>
+
+    <section class="chat-panel" aria-label="Chat de compras">
+      <header class="chat-header">
+        <div>
+          <span class="mobile-brand">CompraTech</span>
+          <h2>Asistente de compras</h2>
+          <p>Especializado en periféricos</p>
+        </div>
+        <div class="header-actions">
+          <button class="icon-button active" id="voiceButton" type="button" aria-label="Desactivar voz" title="Activar o desactivar voz">
+            <span aria-hidden="true">◖))</span>
+          </button>
+          <button class="clear-button" id="clearButton" type="button">Nueva conversación</button>
+        </div>
+      </header>
+
+      <div class="messages" id="messages" aria-live="polite" aria-label="Mensajes del chat">
+        <article class="message assistant-message">
+          <div class="avatar">CT</div>
+          <div class="bubble">
+            <span class="message-author">CompraTech</span>
+            <p>¡Hola! Puedo ayudarte a elegir audífonos, teclados, ratones, monitores, micrófonos y otros periféricos. ¿Qué estás buscando y cuál es tu presupuesto?</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="composer-wrap">
+        <p class="composer-label">Describe lo que necesitas</p>
+        <form class="composer" id="chatForm">
+          <textarea id="messageInput" rows="1" maxlength="2000" placeholder="Ej. Quiero un mouse ergonómico para trabajar..." aria-label="Mensaje" required></textarea>
+          <button type="submit" id="sendButton" aria-label="Enviar mensaje">
+            <span>Enviar</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+        <p class="disclaimer">Verifica precios, disponibilidad y compatibilidad antes de comprar.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

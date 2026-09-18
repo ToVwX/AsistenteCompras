@@ -1,4 +1,8 @@
+from pathlib import Path
+
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from app.agent import ShoppingAssistantAgent
 from app.config import settings
@@ -9,12 +13,19 @@ from app.schemas import ChatRequest, ChatResponse, HealthResponse, ResetResponse
 settings.validate()
 memory = ConversationMemory(max_messages=settings.max_history_messages)
 agent = ShoppingAssistantAgent(settings=settings, memory=memory)
+frontend_dir = Path(__file__).resolve().parents[1] / "frontend"
 
 app = FastAPI(
     title="Asistente inteligente de compras de perifericos",
     description="Entregable 1: agente conversacional de compras y microservicio FastAPI.",
     version="1.0.0",
 )
+app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
+
+
+@app.get("/", include_in_schema=False)
+def frontend() -> FileResponse:
+    return FileResponse(frontend_dir / "index.html")
 
 
 @app.get("/health", response_model=HealthResponse)

@@ -11,6 +11,23 @@ from app.tools import verificar_compatibilidad
 client = TestClient(app)
 
 
+def test_frontend_is_served() -> None:
+    response = client.get("/")
+    assert response.status_code == 200
+    assert "CompraTech" in response.text
+    assert "/static/bot-compratech.png" in response.text
+
+
+def test_frontend_assets_are_served() -> None:
+    styles = client.get("/static/styles.css")
+    script = client.get("/static/app.js")
+    assert styles.status_code == 200
+    assert "overflow-y: auto" in styles.text
+    assert script.status_code == 200
+    assert "preferredSpanishVoice" in script.text
+    assert "Escuchar" in script.text
+
+
 def test_health() -> None:
     response = client.get("/health")
     assert response.status_code == 200
