@@ -35,11 +35,11 @@ Sistema_ayuda_videojuego/
 ## Instalacion en Windows PowerShell
 
 ```powershell
-cd "C:\Users\edgar\Documents\AgentesIA
+cd "C:\Users\edgar\Documents\AgentesIA"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-(.venv) PS "C:\Users\edgar\Documents\AgentesIA
+(.venv) PS "C:\Users\edgar\Documents\AgentesIA"
 pip install groq
 python -m pip install -r requirements.txt
 Copy-Item .env.example .env
