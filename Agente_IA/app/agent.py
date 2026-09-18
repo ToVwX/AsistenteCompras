@@ -43,22 +43,165 @@ especialidad son los perifericos y ayudalo a retomar ese tema.
 
 
 PERIPHERAL_TERMS = (
-    "periferico", "audifono", "auricular", "headset", "teclado", "mouse", "raton",
-    "monitor", "pantalla", "webcam", "camara web", "microfono", "control", "gamepad",
-    "joystick", "bocina", "altavoz", "impresora", "scanner", "tableta grafica",
-    "volante", "dock", "adaptador", "hub usb", "usb", "bluetooth", "inalambrico",
-    "mecanico", "dpi", "latencia", "compatibilidad", "compatible",
+    # Terminos generales
+    "periferico", "perifericos", "hardware", "dispositivo", "accesorio",
+    "accesorios", "setup", "escritorio", "gaming",
+
+    # Audifonos / Headsets
+    "audifono", "audifonos", "auricular", "auriculares", "headset",
+    "casco", "cascos", "diadema", "diademas", "audifonos gamer",
+    "headphones", "earbuds", "in ear", "in-ear", "over ear", "over-ear",
+    "on ear", "on-ear",
+
+    # Teclados
+    "teclado", "teclados", "teclado gamer", "teclado mecanico",
+    "teclado membrana", "teclado inalambrico", "switch", "switches",
+    "keycaps", "teclas", "retroiluminacion", "rgb",
+
+    # Mouse / raton
+    "mouse", "mouses", "raton", "ratones", "ratón", "ratones gamer",
+    "mouse gamer", "mouse inalambrico", "sensor", "dpi", "polling rate",
+    "hz del mouse", "sensibilidad",
+
+    # Monitores / pantallas
+    "monitor", "monitores", "pantalla", "pantallas", "display",
+    "monitor gamer", "144hz", "165hz", "240hz", "360hz",
+    "hz", "hercios", "resolucion", "4k", "2k", "1080p", "full hd",
+    "qhd", "uhd", "ultrawide", "tiempo de respuesta", "ms",
+    "tasa de refresco", "frecuencia de refresco",
+
+    # Webcam
+    "webcam", "webcams", "camara web", "camara", "cámara web",
+    "camara para pc", "camara para computadora",
+
+    # Microfonos
+    "microfono", "microfonos", "mic", "micro", "microfono usb",
+    "microfono xlr", "microfono condensador", "microfono dinamico",
+
+    # Controles
+    "control", "controles", "gamepad", "joystick", "mando",
+    "mando gamer", "control gamer", "control para pc",
+    "control xbox", "control playstation", "control ps4", "control ps5",
+    "game controller",
+
+    # Bocinas / audio
+    "bocina", "bocinas", "altavoz", "altavoces", "parlante",
+    "parlantes", "speaker", "speakers", "barra de sonido",
+    "soundbar",
+
+    # Impresion / otros dispositivos
+    "impresora", "impresoras", "scanner", "escaner", "tableta grafica",
+    "tablet grafica", "volante", "pedales", "sim racing",
+    "dock", "docking station", "base", "adaptador", "hub",
+    "hub usb", "lector",
+
+    # Conectividad
+    "usb", "usb c", "usb-c", "usb a", "bluetooth", "wifi",
+    "inalambrico", "inalambrica", "inalambricos", "inalambricas",
+    "wireless", "con cable", "cableado", "dongle", "receptor",
+    "receptor usb", "2.4ghz", "jack", "3.5mm", "aux",
+
+    # Caracteristicas de perifericos
+    "mecanico", "mecanica", "membrana", "optico", "sensor optico",
+    "ergonomico", "ergonomia", "latencia", "compatible",
+    "compatibilidad", "conectividad", "rgb", "retroiluminado",
+    "retroiluminacion", "bateria", "inalambrico", "wireless",
+    "driver", "software", "programable", "macros", "macro",
+    "teclas macro", "reposamunecas", "reposamuñecas",
+    "cancelacion de ruido", "cancelacion activa", "anc",
+    "sonido envolvente", "surround", "estereo", "estereo",
+    
+    # Plataformas
+    "pc", "computadora", "ordenador", "laptop", "portatil",
+    "celular", "telefono", "movil", "android", "iphone", "ios",
+    "xbox", "xbox one", "xbox series", "xbox series s", "xbox series x",
+    "playstation", "playstation 4", "playstation 5", "ps4", "ps5",
+    "nintendo", "switch", "switch oled",
+    "mac", "macbook",
+    
+    # Gaming
+    "gaming", "gamer", "jugar", "juego", "juegos", "videojuegos",
+    "fps", "competitivo", "competitiva", "streaming", "streamer",
+    "discord", "trabajar", "oficina", "estudiar", "clases",
+    "musica", "musica", "peliculas", "peliculas y series",
+    "programar", "programacion", "diseño", "edicion", "video",
 )
 
 SHOPPING_TERMS = (
-    "comprar", "compra", "recomienda", "recomendacion", "presupuesto", "precio",
-    "pesos", "barato", "economico", "comparar",
+    # Compra
+    "comprar", "compra", "quiero comprar", "busco", "estoy buscando",
+    "necesito", "quiero", "me interesa", "me interesa comprar",
+    "recomienda", "recomendacion", "recomendame", "que me recomiendas",
+    "cual recomiendas", "cual elegir", "cual elijo", "cual conviene",
+    "vale la pena", "conviene",
+
+    # Precio
+    "presupuesto", "precio", "precios", "cuanto cuesta", "cuanto vale",
+    "cuanto sale", "pesos", "mxn", "mx$", "barato", "barata",
+    "baratos", "baratas", "economico", "economica", "economicos",
+    "económicas", "caro", "cara", "caros", "caras",
+    "oferta", "ofertas", "descuento", "descuentos",
+
+    # Comparacion
+    "comparar", "comparacion", "compara", "comparame", "diferencia",
+    "diferencias", "mejor para", "cual es mejor", "entre estos",
+    "entre estos dos", "entre ambos", "opcion", "opciones",
+    "alternativa", "alternativas",
+
+    # Calidad / eleccion
+    "calidad", "calidad precio", "calidad-precio", "relacion calidad",
+    "rendimiento", "durabilidad", "duradero", "mejor opcion",
+    "buena opcion", "recomendable", "recomendable para",
+
+    # Disponibilidad
+    "disponible", "disponibilidad", "stock", "existencia",
 )
 
 FOLLOW_UP_TERMS = (
-    "de esos", "de esas", "cual elegirias", "cual conviene", "el primero",
-    "el segundo", "la primera", "la segunda", "y si", "comparalos", "mas barato",
-    "mas comodo", "con cable", "sin cable",
+    # Referencias a recomendaciones anteriores
+    "de esos", "de esas", "de esos cual", "de esas cual",
+    "cual de esos", "cual de esas", "cuales de esos",
+    "cuales de esas", "el primero", "el segundo", "el tercero",
+    "la primera", "la segunda", "la tercera",
+    "ese", "esa", "esos", "esas", "aquel", "aquella",
+    "este", "esta", "estos", "estas",
+
+    # Eleccion
+    "cual elegirias", "cual elegirias tu", "cual escogerias",
+    "cual conviene", "cual elijo", "cual elegir",
+    "con cual me quedo", "cual recomiendas",
+    "cual me recomiendas", "tu cual comprarias",
+    "cual comprarias",
+
+    # Cambios de requisitos
+    "y si", "y que tal si", "y uno", "y otro",
+    "hay otro", "alguno otro", "otra opcion", "otra alternativa",
+    "uno mas barato", "uno mas caro", "algo mas barato",
+    "algo mas economico", "algo mejor", "algo similar",
+    "uno parecido", "uno similar",
+
+    # Comparaciones
+    "comparalos", "comparalas", "compara esos", "compara esas",
+    "cual es mejor", "cual conviene mas", "cual tiene mas",
+    "cual tiene mejor", "que diferencia hay",
+
+    # Caracteristicas
+    "mas comodo", "mas comoda", "mas ligero", "mas ligera",
+    "mas pesado", "mas pesada", "con cable", "sin cable",
+    "inalambrico", "inalambrica", "con bluetooth", "con usb",
+    "con rgb", "sin rgb", "con microfono", "sin microfono",
+    "con cancelacion de ruido",
+
+    # Compatibilidad
+    "funciona con", "sirve para", "es compatible",
+    "es compatible con", "lo puedo usar", "se puede usar",
+    "funciona en", "sirve en", "para pc", "para computadora",
+    "para xbox", "para playstation", "para ps4", "para ps5",
+    "para celular", "para telefono", "para switch",
+
+    # Continuacion natural
+    "y tambien", "y ademas", "tambien quiero", "ahora busca",
+    "ahora quiero", "y uno de", "y alguno de",
 )
 
 
