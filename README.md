@@ -32,6 +32,7 @@ Sistema_ayuda_videojuego/
 cd "C:\Users\edgar\Documents\AgentesIA\Sistema_ayuda_videojuego"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+pip install groq
 python -m pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
